@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EQUITHOS MÉDICA: Salud Integral</title>
+    <title>EQUITHOS MÉDICA: Salud Integral | La Carolina, Quito</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         /* ==========================================================================
@@ -11,14 +11,14 @@
            ========================================================================== */
         :root {
             /* Colores de Marca EQUITHOS MÉDICA */
-            --eq-primary: #3d7869;      /* Verde esmeralda/salud principal */
+            --eq-primary: #3d7869;      /* Verde esmeralda principal */
             --eq-dark: #1b352f;         /* Verde oscuro texto / encabezados */
             --eq-light: #f2f7f5;        /* Fondo claro complementario */
             --eq-accent: #529483;       /* Verde claro interacción */
             
             /* Colores Perfil Dra. Johanna De la Cruz (JDC) */
             --jdc-slate: #6b899a;       /* Gris azulado elegante */
-            --jdc-gold: #c6a768;        /* Dorado/hoja accent */
+            --jdc-gold: #c6a768;        /* Dorado accent */
             --jdc-bg: #f9f9f6;          /* Fondo cálido perla */
 
             --text-main: #333333;
@@ -73,7 +73,6 @@
             gap: 12px;
         }
 
-        /* SVG del Logo Equithos */
         .logo-svg {
             width: 48px;
             height: 48px;
@@ -154,7 +153,7 @@
         }
 
         /* ==========================================================================
-           INICIO / HERO
+           1. INICIO / HERO
            ========================================================================== */
         #inicio {
             display: grid;
@@ -165,7 +164,7 @@
         }
 
         .hero-content h2 {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             color: var(--eq-dark);
             line-height: 1.2;
             margin-bottom: 1rem;
@@ -210,12 +209,23 @@
             background-color: var(--eq-dark);
         }
 
-        .hero-card {
+        .hero-profile-card {
             background: var(--white);
             border-radius: 12px;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: var(--shadow);
             border-top: 5px solid var(--eq-primary);
+            text-align: center;
+        }
+
+        .hero-profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--eq-light);
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         /* ==========================================================================
@@ -268,7 +278,7 @@
         }
 
         /* ==========================================================================
-           SECCIÓN EXCLUSIVA JOHANNA DE LA CRUZ (COLORES PROPIOS)
+           SECCIÓN EXCLUSIVA JOHANNA DE LA CRUZ (CON FOTO Y LOGO)
            ========================================================================== */
         .jdc-section-wrapper {
             background-color: var(--jdc-bg);
@@ -282,7 +292,7 @@
             max-width: 1000px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 320px 1fr;
             gap: 2.5rem;
             align-items: center;
             background: var(--white);
@@ -291,17 +301,30 @@
             box-shadow: 0 4px 20px rgba(107, 137, 154, 0.15);
         }
 
-        .jdc-logo-box {
+        .jdc-photo-box {
             text-align: center;
-            padding: 1rem;
+            padding-right: 1.5rem;
             border-right: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* SVG Reconstrucción exacta del Logo Johana De La Cruz (JDC) */
         .jdc-svg-logo {
             width: 100%;
-            max-width: 220px;
+            max-width: 200px;
             height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .jdc-photo {
+            width: 220px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid var(--jdc-gold);
+            box-shadow: var(--shadow);
+            margin-top: 0.5rem;
         }
 
         .jdc-content h3 {
@@ -486,9 +509,10 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            .jdc-logo-box {
+            .jdc-photo-box {
                 border-right: none;
                 border-bottom: 1px solid #eee;
+                padding-right: 0;
                 padding-bottom: 1.5rem;
             }
             .contact-grid {
@@ -526,14 +550,14 @@
             <nav>
                 <a href="#inicio">Inicio</a>
                 <a href="#medicina-general">Medicina General</a>
-                <a href="#control-cronicOS">Crónicos</a>
+                <a href="#control-cronicos">Crónicos</a>
                 <a href="#procedimientos">Procedimientos</a>
                 <a href="#psicologia">Psicología</a>
                 <a href="#equipo">Equipo</a>
                 <a href="#empresas">Empresas</a>
                 <a href="#teleconsulta">Teleconsulta</a>
                 <a href="#contacto">Ubicación</a>
-                <a href="https://wa.me/593999999999?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-whp-nav" target="_blank">
+                <a href="https://wa.me/593998597132?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-whp-nav" target="_blank">
                     <i class="fab fa-whatsapp"></i> Agendar
                 </a>
             </nav>
@@ -549,19 +573,22 @@
             <h2>Medicina cercana para cuidar tu salud con continuidad</h2>
             <p>Atención médica presencial de 25 a 30 minutos orientada a la prevención, seguimiento cardiometabólico y trato humano.</p>
             <div class="hero-cta">
-                <a href="https://wa.me/593999999999?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-primary" target="_blank">
+                <a href="https://wa.me/593998597132?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-primary" target="_blank">
                     <i class="fab fa-whatsapp"></i> Agendar Consulta USD $20
                 </a>
             </div>
         </div>
-        <div class="hero-card">
-            <h3>Atención Médica Integral</h3>
-            <p style="margin-top: 0.5rem; color: var(--text-muted);">Ubicados en zona estratégica cerca de oficinas, comercios y estación del Metro La Carolina.</p>
+        <div class="hero-profile-card">
+            <!-- Foto de la Dra. Johanna De la Cruz -->
+            <img src="https://via.placeholder.com/220x260/6b899a/ffffff?text=Dra.+Johanna+De+la+Cruz" alt="Dra. Johanna De la Cruz" class="hero-profile-img">
+            <h3 style="color: var(--eq-dark);">Dra. Johanna De la Cruz, Mgs.</h3>
+            <p style="color: var(--eq-primary); font-weight: 600; font-size: 0.95rem;">Medicina General & Gestión en Salud</p>
+            <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">Consulta de 25 a 30 min • Seguimiento continuo y plan de salud escrito.</p>
             <hr style="margin: 1rem 0; border: none; border-top: 1px solid #eee;">
-            <ul style="list-style: none;">
-                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--eq-primary);"></i> Consulta presencial regular: <strong>$20 USD</strong></li>
-                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--eq-primary);"></i> Tiempos claros sin esperas prolongadas</li>
-                <li><i class="fas fa-check-circle" style="color: var(--eq-primary);"></i> Planes y seguimiento escrito continuo</li>
+            <ul style="list-style: none; text-align: left; font-size: 0.9rem;">
+                <li style="margin-bottom: 0.4rem;"><i class="fas fa-check-circle" style="color: var(--eq-primary);"></i> Consulta presencial regular: <strong>$20 USD</strong></li>
+                <li style="margin-bottom: 0.4rem;"><i class="fas fa-check-circle" style="color: var(--eq-primary);"></i> Tiempos claros sin esperas prolongadas</li>
+                <li><i class="fas fa-check-circle" style="color: var(--eq-primary);"></i> Cerca del Metro La Carolina y Mall El Jardín</li>
             </ul>
         </div>
     </section>
@@ -586,7 +613,7 @@
                         <li><i class="fas fa-check"></i> Síntomas agudos no urgentes</li>
                     </ul>
                 </div>
-                <a href="https://wa.me/593999999999?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-primary" style="text-align: center; justify-content: center;" target="_blank">Agendar Cita</a>
+                <a href="https://wa.me/593998597132?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-primary" style="text-align: center; justify-content: center;" target="_blank">Agendar Cita</a>
             </div>
             <div class="card">
                 <div>
@@ -599,7 +626,7 @@
                         <li><i class="fas fa-check"></i> Revisión de factores de riesgo</li>
                     </ul>
                 </div>
-                <a href="https://wa.me/593999999999?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-primary" style="text-align: center; justify-content: center;" target="_blank">Agendar Cita</a>
+                <a href="https://wa.me/593998597132?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-primary" style="text-align: center; justify-content: center;" target="_blank">Agendar Cita</a>
             </div>
         </div>
     </section>
@@ -702,6 +729,7 @@
                     <li><i class="fas fa-check"></i> Estimulación del lenguaje</li>
                     <li><i class="fas fa-check"></i> Acompañamiento integral</li>
                 </ul>
+                <a href="https://wa.me/593998597132?text=Quiero%20agendar%20una%20sesion%20con%20Psic.%20Alexandra%20Vinueza" class="btn-primary" style="margin-top: 1rem; text-align: center; justify-content: center;" target="_blank">Agendar con Psic. Alexandra</a>
             </div>
         </div>
     </section>
@@ -715,22 +743,24 @@
             <p>Profesionales de la salud comprometidos con tu bienestar</p>
         </div>
 
-        <!-- BLOQUE EXCLUSIVO DRA. JOHANNA DE LA CRUZ (USO DE SUS PROPIOS COLORES Y LOGO) -->
+        <!-- BLOQUE EXCLUSIVO DRA. JOHANNA DE LA CRUZ (INCLUYE FOTO Y LOGO JDC) -->
         <div class="jdc-section-wrapper">
             <div class="jdc-container">
-                <div class="jdc-logo-box">
-                    <!-- SVG Reconstruido del Logo Oficial "JDC Dra. Johanna De la Cruz" -->
-                    <svg class="jdc-svg-logo" viewBox="0 0 350 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M90 80C90 50 130 50 130 80C130 120 70 110 70 130C70 150 110 150 130 130" stroke="#6b899a" stroke-width="6" fill="none" stroke-linecap="round"/>
-                        <path d="M140 60C180 60 210 80 210 110C210 140 180 160 140 160" stroke="#6b899a" stroke-width="6" fill="none" stroke-linecap="round"/>
-                        <!-- Hoja dorada central -->
-                        <path d="M140 90C160 70 180 90 180 110C160 130 140 110 140 90Z" fill="#c6a768"/>
-                        <path d="M140 90C160 100 180 110 180 110" stroke="#f9f9f6" stroke-width="2"/>
-                        <path d="M130 160C160 160 190 175 220 160" stroke="#c6a768" stroke-width="4" fill="none"/>
-                        <!-- Texto del Logo JDC -->
-                        <text x="175" y="185" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#6b899a" text-anchor="middle" letter-spacing="1">DRA. JOHANNA DE LA CRUZ</text>
+                <div class="jdc-photo-box">
+                    <!-- SVG Reconstruido del Logo Oficial JDC -->
+                    <svg class="jdc-svg-logo" viewBox="0 0 350 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M90 70C90 40 130 40 130 70C130 110 70 100 70 120C70 140 110 140 130 120" stroke="#6b899a" stroke-width="6" fill="none" stroke-linecap="round"/>
+                        <path d="M140 50C180 50 210 70 210 100C210 130 180 150 140 150" stroke="#6b899a" stroke-width="6" fill="none" stroke-linecap="round"/>
+                        <path d="M140 80C160 60 180 80 180 100C160 120 140 100 140 80Z" fill="#c6a768"/>
+                        <path d="M140 80C160 90 180 100 180 100" stroke="#f9f9f6" stroke-width="2"/>
+                        <path d="M130 150C160 150 190 165 220 150" stroke="#c6a768" stroke-width="4" fill="none"/>
+                        <text x="175" y="172" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#6b899a" text-anchor="middle" letter-spacing="1">DRA. JOHANNA DE LA CRUZ</text>
                     </svg>
+
+                    <!-- Foto de la Dra. Johanna De la Cruz -->
+                    <img src="https://via.placeholder.com/220x260/6b899a/ffffff?text=Dra.+Johanna+De+la+Cruz" alt="Dra. Johanna De la Cruz" class="jdc-photo">
                 </div>
+
                 <div class="jdc-content">
                     <h3>Dra. Johanna De la Cruz, Mgs.</h3>
                     <div class="jdc-subtitle">Medicina General & Gestión de Servicios de Salud</div>
@@ -744,18 +774,22 @@
                     <p><strong>Horarios de atención (Previa Cita):</strong><br>
                     Lunes a Viernes: 09:00 a 18:00 | Sábados: 09:00 a 12:00</p>
                     <br>
-                    <a href="https://wa.me/593999999999?text=Quiero%20reservar%20consulta%20con%20Dra.%20Johanna%20De%20la%20Cruz" class="btn-jdc" target="_blank">
+                    <a href="https://wa.me/593998597132?text=Quiero%20reservar%20consulta%20con%20Dra.%20Johanna%20De%20la%20Cruz" class="btn-jdc" target="_blank">
                         <i class="fab fa-whatsapp"></i> Agendar con Dra. Johanna
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- SEGUNDO PERFIL (MANTIENE ESTILO GENERAL EQUITHOS) -->
+        <!-- PERFIL PSIC. ALEXANDRA VINUEZA (ESTILO GENERAL EQUITHOS) -->
         <div class="card" style="max-width: 1000px; margin: 0 auto;">
-            <h3>Psic. Alexandra</h3>
+            <h3>Psic. Alexandra Vinueza</h3>
             <p style="color: var(--eq-primary); font-weight: 600;">Bienestar Emocional & Salud Integral</p>
-            <p style="margin-top: 0.5rem;">Licenciada en Psicología y Enfermería, Magíster en Nutrición y Dietética. Trabaja en el acompañamiento biopsicosocial, hábitos saludables y promoción del autocuidado.</p>
+            <p style="margin-top: 0.5rem;">Licenciada en Psicología y Enfermería, Magíster en Nutrición y Dietética. Trabaja en el acompañamiento biopsicosocial, hábitos saludables, relación con la alimentación y autocuidado.</p>
+            <br>
+            <a href="https://wa.me/593998597132?text=Quiero%20agendar%20una%20sesion%20con%20Psic.%20Alexandra%20Vinueza" class="btn-primary" style="align-self: flex-start;" target="_blank">
+                <i class="fab fa-whatsapp"></i> Agendar con Psic. Alexandra Vinueza
+            </a>
         </div>
     </section>
 
@@ -774,7 +808,7 @@
                 <li>Programas preventivos y talleres de salud laboral.</li>
                 <li>Asesoría en gestión y auditoría sanitaria.</li>
             </ul>
-            <a href="https://wa.me/593999999999?text=Deseo%20cotizar%20servicios%20ocupacionales%20para%20mi%20empresa" class="btn-primary" target="_blank">Solicitar Cotización Empresarial</a>
+            <a href="https://wa.me/593998597132?text=Deseo%20cotizar%20servicios%20ocupacionales%20para%20mi%20empresa" class="btn-primary" target="_blank">Solicitar Cotización Empresarial</a>
         </div>
     </section>
 
@@ -795,7 +829,7 @@
                     <li><i class="fas fa-lock"></i> Plataforma privada y segura</li>
                     <li><i class="fas fa-file-invoice"></i> Envío de recetas/indicaciones digitales</li>
                 </ul>
-                <a href="https://wa.me/593999999999?text=Quiero%20agendar%20una%20teleconsulta" class="btn-primary" style="text-align: center; justify-content: center;" target="_blank">Agendar Teleconsulta</a>
+                <a href="https://wa.me/593998597132?text=Quiero%20agendar%20una%20teleconsulta" class="btn-primary" style="text-align: center; justify-content: center;" target="_blank">Agendar Teleconsulta</a>
             </div>
         </div>
     </section>
@@ -864,8 +898,8 @@
                 <div class="contact-item">
                     <i class="fab fa-whatsapp"></i>
                     <div>
-                        <strong>Citas y Agendamiento:</strong>
-                        <p>Mensaje directo a WhatsApp para disponibilidad inmediata.</p>
+                        <strong>WhatsApp Directo:</strong>
+                        <p>+593 99 859 7132</p>
                     </div>
                 </div>
             </div>
@@ -878,7 +912,7 @@
     <!-- ==========================================================================
        BOTÓN FLOTANTE WHATSAPP
        ========================================================================== -->
-    <a href="https://wa.me/593999999999?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-float-whp" target="_blank" title="Agendar por WhatsApp">
+    <a href="https://wa.me/593998597132?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-float-whp" target="_blank" title="Agendar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -887,7 +921,7 @@
        ========================================================================== -->
     <footer>
         <p>&copy; 2026 EQUITHOS MÉDICA - Salud Integral. Todos los derechos reservados.</p>
-        <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8;">Atención médica en Quito, Ecuador • Cumplimiento con la normativa de protección de datos de salud.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8;">Atención médica en La Carolina, Quito, Ecuador • Cumplimiento con la normativa de protección de datos de salud.</p>
     </footer>
 
 </body>
