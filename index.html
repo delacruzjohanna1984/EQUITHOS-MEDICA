@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Medicina general, prevención y seguimiento de salud cerca de La Carolina, Quito. Conoce los servicios de Equithos Médica.">
+  <title>Equithos Médica: Salud Integral | Medicina general en La Carolina, Quito</title>
+  <style>
+    :root{--verde:#25564d;--verde2:#376c60;--salvia:#6c9d8a;--claro:#eef5f1;--tinta:#20332e;--gris:#52615b;--borde:#d9e6df;--blanco:#fff;--azul-jdc:#617a8c;--oro-jdc:#c8ae79}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#fbfcfa;color:var(--tinta);font:16px/1.65 Arial,Helvetica,sans-serif}
+    a{color:var(--verde)}
+    img{max-width:100%;height:auto}
+    .contenedor{width:min(1120px,calc(100% - 36px));margin:auto}
+    .salto{position:absolute;left:-9999px}.salto:focus{left:12px;top:12px;z-index:100;background:#fff;padding:10px}
+    header{background:#fff;border-bottom:1px solid var(--borde);position:sticky;top:0;z-index:20}
+    .barra{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
+    .marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--verde);font-weight:800;line-height:1.1}
+    .marca svg{width:42px;height:42px;flex:none}
+    .marca small{display:block;color:var(--salvia);font-size:11px;letter-spacing:.18em}
+    nav{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}
+    nav a{text-decoration:none;font-weight:700}
+    nav a:hover,nav a:focus{text-decoration:underline}
+    .boton{display:inline-block;background:var(--verde);color:#fff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:10px;border:2px solid var(--verde);text-align:center}
+    .boton:hover,.boton:focus{background:#173e36}
+    .boton.secundario{background:transparent;color:var(--verde)}
+    .boton.secundario:hover{background:var(--claro)}
+    .hero{background:linear-gradient(130deg,#e5f0e9 0%,#f8fbf8 65%);padding:70px 0}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+    .etiqueta{color:var(--verde2);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:12px}
+    h1,h2,h3{line-height:1.2;margin:0 0 16px}
+    h1{font-size:clamp(36px,5vw,62px);letter-spacing:-.04em}
+    h2{font-size:clamp(27px,3vw,38px);letter-spacing:-.025em}
+    h3{font-size:21px}
+    p{margin:0 0 16px}
+    .hero p{font-size:19px;max-width:610px}
+    .acciones{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}
+    .datos{display:flex;gap:12px;flex-wrap:wrap}
+    .dato{background:#fff;border:1px solid var(--borde);border-radius:12px;padding:12px 16px;font-weight:700}
+    .foto{border-radius:26px;overflow:hidden;box-shadow:0 20px 50px #25564d22;background:var(--salvia);min-height:360px}
+    .foto img{display:block;width:100%;height:100%;min-height:360px;object-fit:cover}
+    section{padding:72px 0;scroll-margin-top:90px}
+    .intro{max-width:720px;color:var(--gris)}
+    .rejilla{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .tarjeta{background:#fff;border:1px solid var(--borde);border-radius:18px;padding:25px;box-shadow:0 7px 24px #25564d0a}
+    .tarjeta p:last-child{margin-bottom:0}
+    .precio{font-size:30px;font-weight:800;color:var(--verde);line-height:1.2}
+    .precio small{font-size:14px;font-weight:400;color:var(--gris)}
+    .suave{background:var(--claro)}
+    .dos{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+    ul{padding-left:21px;margin:12px 0 20px}
+    li{margin-bottom:7px}
+    .aviso{border-left:4px solid var(--salvia);padding:12px 16px;background:#fff;border-radius:0 9px 9px 0;color:var(--gris)}
+    .jdc{background:#f5f7f8;border:1px solid #dce3e7;border-radius:22px;padding:30px}
+    .jdc .logo{display:block;width:min(370px,100%);margin:0 auto 24px}
+    .jdc h3,.jdc a{color:var(--azul-jdc)}
+    .jdc .boton{background:var(--azul-jdc);border-color:var(--azul-jdc);color:#fff}
+    .jdc .boton:hover{background:#455f71}
+    .jdc .acento{color:var(--oro-jdc)}
+    .tabla{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden}
+    .tabla th,.tabla td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--borde);vertical-align:top}
+    .tabla th{background:var(--verde);color:#fff}
+    details{background:#fff;border:1px solid var(--borde);border-radius:11px;padding:13px 17px;margin:10px 0}
+    summary{cursor:pointer;font-weight:700;color:var(--verde)}
+    details p{margin:12px 0 0}
+    .videos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}
+    .videos a{display:block;padding:16px 19px;background:#fff;border:1px solid var(--borde);border-radius:11px;text-decoration:none;font-weight:700}
+    .videos a:hover{text-decoration:underline}
+    .mapa{border-radius:18px;overflow:hidden;border:1px solid var(--borde);min-height:310px;background:#e9eee9}
+    iframe{display:block;border:0;width:100%;height:310px}
+    footer{background:#183f37;color:#e7f0ea;padding:42px 0}
+    footer a{color:#e7f0ea}
+    .pie{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .flotante{position:fixed;right:18px;bottom:18px;z-index:30;box-shadow:0 8px 30px #183f3744}
+    @media(max-width:850px){nav{display:none}.hero-grid,.dos{grid-template-columns:1fr}.rejilla{grid-template-columns:repeat(2,1fr)}.foto{max-height:420px}}
+    @media(max-width:600px){section{padding:54px 0}.hero{padding:45px 0}.rejilla,.videos{grid-template-columns:1fr}.barra{min-height:68px}.hero p{font-size:17px}.flotante{left:18px;right:18px}.pie{padding-bottom:55px}.tabla{font-size:14px}.tabla th,.tabla td{padding:10px}}
+  </style>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+
+<header>
+  <div class="contenedor barra">
+    <a class="marca" href="#inicio" aria-label="Equithos Médica, ir al inicio">
+      <svg viewBox="0 0 100 100" role="img" aria-label="Logo Equithos Médica">
+        <circle cx="50" cy="50" r="48" fill="#376c60"/>
+        <path d="M14 51h20l11-22 13 45 13-23h15" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>EQUITHOS MÉDICA<small>SALUD INTEGRAL</small></span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#medicina">Medicina</a><a href="#cronicos">Controles</a><a href="#procedimientos">Procedimientos</a>
+      <a href="#psicologia">Psicología</a><a href="#equipo">Equipo</a><a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="hero" id="inicio">
+    <div class="contenedor hero-grid">
+      <div>
+        <div class="etiqueta">La Carolina · Quito</div>
+        <h1>EQUITHOS MÉDICA: Salud Integral</h1>
+        <p><strong>Medicina cercana para cuidar tu salud con continuidad en La Carolina.</strong></p>
+        <p>Consulta general, prevención y seguimiento con la Dra. Johanna de la Cruz. Atención particular con tiempo para escuchar y un plan claro para continuar tu cuidado.</p>
+        <div class="acciones">
+          <a class="boton" href="#contacto">Agendar por WhatsApp</a>
+          <a class="boton secundario" href="#medicina">Conocer los servicios</a>
+        </div>
+        <div class="datos">
+          <span class="dato">Consulta general: USD 20</span>
+          <span class="dato">25 a 30 minutos</span>
+          <span class="dato">Atención previa cita</span>
+        </div>
+      </div>
+      <div class="foto">
+        <img src="Foto JDC.jpg" alt="Dra. Johanna de la Cruz" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="prioridades">
+    <div class="contenedor">
+      <div class="etiqueta">Cómo podemos ayudarte</div>
+      <h2 id="prioridades">Tres servicios para empezar a cuidarte</h2>
+      <div class="rejilla">
+        <article class="tarjeta"><h3>Medicina general</h3><p>Valoración de molestias frecuentes, orientación, prevención y seguimiento.</p><p class="precio">USD 20</p><a href="#medicina">Ver consulta →</a></article>
+        <article class="tarjeta"><h3>Presión y diabetes</h3><p>Revisión de resultados, tratamiento y hábitos con un plan de control acordado contigo.</p><p class="precio">Desde USD 15</p><a href="#cronicos">Ver controles →</a></article>
+        <article class="tarjeta"><h3>Psicología y hábitos</h3><p>Un espacio para trabajar bienestar emocional, relación con la alimentación y autocuidado.</p><p class="precio"><small>Tarifa por confirmar</small></p><a href="#psicologia">Conocer el servicio →</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="suave" id="medicina">
+    <div class="contenedor dos">
+      <div>
+        <div class="etiqueta">Medicina general en La Carolina</div>
+        <h2>Una consulta con tiempo para escucharte</h2>
+        <p>La atención presencial dura aproximadamente 25 a 30 minutos e incluye entrevista, valoración clínica, orientación y un plan de seguimiento cuando corresponda.</p>
+        <ul>
+          <li>Molestias habituales que pueden atenderse mediante una cita programada.</li>
+          <li>Chequeos preventivos y revisión de factores de riesgo.</li>
+          <li>Control de presión arterial, diabetes y otras necesidades de seguimiento.</li>
+          <li>Valoración para certificados cuando sea pertinente.</li>
+        </ul>
+        <p class="aviso">La consulta no reemplaza la atención de emergencias. Los certificados se emiten únicamente después de una valoración.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="etiqueta">Consulta presencial</div>
+        <p class="precio">USD 20</p>
+        <p>Duración estimada: 25 a 30 minutos. Insumos, medicamentos y pruebas externas se cobran por separado cuando proceda.</p>
+        <a class="boton" href="#contacto">Reservar consulta</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="cronicos">
+    <div class="contenedor">
+      <div class="etiqueta">Prevención y continuidad</div>
+      <h2>Control de presión y diabetes</h2>
+      <p class="intro">Para quienes necesitan una primera revisión o controles periódicos. Revisamos resultados, medicación, adherencia y hábitos; la frecuencia de las próximas citas se acuerda según la valoración clínica.</p>
+      <div class="rejilla">
+        <article class="tarjeta"><h3>Primera evaluación</h3><p>Valoración inicial y plan escrito de seguimiento.</p><p class="precio">USD 20</p></article>
+        <article class="tarjeta"><h3>Control posterior</h3><p>Revisión de resultados y evolución del plan.</p><p class="precio">USD 15</p></article>
+        <article class="tarjeta"><h3>Seguimiento cercano</h3><p>Orientación para sostener los controles y resolver dudas en citas programadas.</p><a href="#contacto">Solicitar una cita →</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="suave" id="procedimientos">
+    <div class="contenedor">
+      <div class="etiqueta">Atención ambulatoria</div>
+      <h2>Procedimientos</h2>
+      <p class="intro">La disponibilidad depende de la valoración, los insumos y la cartera de servicios habilitada. Confirma el procedimiento al reservar.</p>
+      <div style="overflow-x:auto">
+        <table class="tabla">
+          <thead><tr><th>Servicio</th><th>Tarifa referencial</th><th>Observación</th></tr></thead>
+          <tbody>
+            <tr><td>Curación simple o retiro de puntos</td><td>USD 15</td><td>Insumos incluidos</td></tr>
+            <tr><td>Nebulización</td><td>USD 10</td><td>Fármaco e insumos según el caso</td></tr>
+            <tr><td>Inyección intramuscular / intravenosa</td><td>USD 3 / USD 5</td><td>Fármacos aparte</td></tr>
+            <tr><td>Glucosa capilar</td><td>USD 3</td><td>Sujeta a disponibilidad</td></tr>
+            <tr><td>Otros procedimientos menores</td><td>Consultar</td><td>Solo tras confirmar complejidad y posibilidad de atención ambulatoria</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:18px" class="aviso">Todos los procedimientos están sujetos a valoración y cartera habilitada.</p>
+    </div>
+  </section>
+
+  <section id="psicologia">
+    <div class="contenedor dos">
+      <div>
+        <div class="etiqueta">Bienestar emocional</div>
+        <h2>Psicología y hábitos saludables</h2>
+        <p>Alexandra trabaja desde un enfoque biopsicosocial para acompañar el bienestar emocional, la relación con la alimentación, los hábitos y el autocuidado.</p>
+        <p>La orientación sobre alimentación y hábitos se presenta dentro del alcance de su formación y de la prestación profesional habilitada; no sustituye una valoración médica o nutricional cuando se requiera.</p>
+        <a class="boton" href="#contacto">Consultar disponibilidad</a>
+      </div>
+      <div class="tarjeta">
+        <h3>Sesión de psicología</h3>
+        <p>Duración aproximada: 50 minutos.</p>
+        <p><strong>Tarifa orientativa: USD 30–35, sujeta a confirmación.</strong></p>
+        <p>Consulta la disponibilidad y las condiciones antes de reservar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="suave" id="equipo">
+    <div class="contenedor">
+      <div class="etiqueta">Nuestro equipo</div>
+      <h2>Profesionales que te acompañan</h2>
+      <div class="dos">
+        <article class="jdc">
+          <img class="logo" src="Logo Johanna De la Cruz Cevallos.jpeg" alt="Logo de la Dra. Johanna de la Cruz">
+          <h3>Dra. Johanna de la Cruz</h3>
+          <p>Médica y magíster en Salud Pública con más de 12 años de experiencia en atención clínica, salud ocupacional y gestión de servicios. Su consulta combina escucha, prevención y seguimiento de cada plan de salud.</p>
+          <p><small>Registro profesional: L37F48N142 · Registro SENESCYT Salud Pública: 4842247200.</small></p>
+          <p><strong>Atención previa cita:</strong> lunes a viernes de 09:00 a 18:00; sábados de 09:00 a 12:00.</p>
+          <a class="boton" href="#contacto">Reservar con Johanna</a>
+        </article>
+        <article class="tarjeta">
+          <h3>Alexandra</h3>
+          <p>Licenciada en Psicología y Enfermería, magíster en Nutrición y Dietética. Trabaja en bienestar emocional, relación con la alimentación, hábitos y autocuidado.</p>
+          <p>Solicita información sobre su agenda y las prestaciones disponibles.</p>
+          <a class="boton" href="#contacto">Consultar con Alexandra</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="empresas">
+    <div class="contenedor dos">
+      <div>
+        <div class="etiqueta">Salud ocupacional</div>
+        <h2>Prevención para empresas</h2>
+        <p>La experiencia de la Dra. Johanna de la Cruz incluye salud ocupacional, auditoría y gestión de servicios de salud. Podemos conversar sobre chequeos preventivos, fichas ocupacionales y programas adaptados a las necesidades de tu equipo.</p>
+        <p>El alcance y la cotización se definen según el caso, las competencias profesionales y los requisitos de habilitación aplicables.</p>
+        <a class="boton" href="#contacto">Solicitar cotización</a>
+      </div>
+      <div class="tarjeta">
+        <h3>Para preparar una propuesta</h3>
+        <p>Al contactarnos, indica el nombre de la empresa, el número aproximado de personas y el servicio que necesitas. No envíes historias clínicas ni resultados médicos por este medio.</p>
+        <p><small>Certificación en Prevención de Riesgos Laborales: MDT-7219-CCL-611445.</small></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="suave" id="teleconsulta">
+    <div class="contenedor dos">
+      <div>
+        <div class="etiqueta">Seguimiento a distancia</div>
+        <h2>Teleconsulta</h2>
+        <p>Para casos que puedan resolverse de forma remota, especialmente controles de seguimiento. Antes de confirmar, el equipo verificará si la atención a distancia es adecuada o si necesitas una valoración presencial.</p>
+        <ol>
+          <li>Solicita disponibilidad y explica brevemente el motivo general de la cita.</li>
+          <li>Recibe confirmación de horario, medio de atención y forma de pago.</li>
+          <li>Conéctate desde un lugar privado y con buena conexión.</li>
+        </ol>
+        <p class="aviso">La teleconsulta tiene límites clínicos y no se usa para emergencias. Comparte información de salud únicamente por el canal privado indicado al confirmar la cita.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Teleconsulta de seguimiento</h3>
+        <p class="precio">USD 15</p>
+        <p>Duración aproximada: 20 a 25 minutos.</p>
+        <a class="boton" href="#contacto">Consultar si aplica a mi caso</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="guia">
+    <div class="contenedor">
+      <div class="etiqueta">Guía de salud</div>
+      <h2>Respuestas en video con la Dra. Johanna</h2>
+      <p class="intro">Contenido educativo para comprender temas frecuentes de salud. Los videos no sustituyen una consulta individual.</p>
+      <div class="videos">
+        <a href="https://www.youtube.com/watch?v=4uxuQhcCNlA" target="_blank" rel="noopener noreferrer">Gripe, influenza o COVID ↗</a>
+        <a href="https://www.youtube.com/watch?v=WJ0QFwx5quU" target="_blank" rel="noopener noreferrer">Por qué cambia el metabolismo femenino ↗</a>
+        <a href="https://www.youtube.com/watch?v=XN8HwT0cRuU" target="_blank" rel="noopener noreferrer">Artritis y artrosis ↗</a>
+        <a href="https://www.youtube.com/watch?v=t6vZKi8tzmU" target="_blank" rel="noopener noreferrer">Probióticos y prebióticos ↗</a>
+        <a href="https://www.youtube.com/watch?v=txHlA_oC05Q" target="_blank" rel="noopener noreferrer">Vitaminas: ¿para qué sirven? ↗</a>
+        <a href="https://www.youtube.com/watch?v=bZhOqeiiR2U" target="_blank" rel="noopener noreferrer">¿Tu digestión no está bien? ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="suave" id="contacto">
+    <div class="contenedor">
+      <div class="etiqueta">Ubicación y contacto</div>
+      <h2>Visítanos cerca de La Carolina</h2>
+      <div class="dos">
+        <div>
+          <p>Estamos en la calle Grecia, al oeste del parque La Carolina, cerca de Mall El Jardín y de la estación La Carolina del Metro de Quito.</p>
+          <p><strong>Horario de la Dra. Johanna, previa cita:</strong><br>Lunes a viernes, 09:00 a 18:00<br>Sábados, 09:00 a 12:00</p>
+          <p><a class="boton" href="https://maps.app.goo.gl/wim3sNRPQeSF1tjr8" target="_blank" rel="noopener noreferrer">Abrir ubicación en Maps</a></p>
+          <p><strong>WhatsApp:</strong> el número de reservas está pendiente de incorporarse. Mientras tanto, utiliza el enlace de ubicación y consulta la disponibilidad por el canal de contacto del consultorio.</p>
+        </div>
+        <div class="mapa">
+          <iframe title="Mapa de ubicación de Equithos Médica en La Carolina, Quito" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=-78.4935%2C-0.1936%2C-78.4835%2C-0.1836&amp;layer=mapnik&amp;marker=-0.188628%2C-78.488488"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas">
+    <div class="contenedor">
+      <div class="etiqueta">Preguntas frecuentes</div>
+      <h2>Antes de tu cita</h2>
+      <details><summary>¿La consulta general cuesta USD 20?</summary><p>Sí. La consulta presencial de medicina general tiene una duración estimada de 25 a 30 minutos. Insumos, medicamentos o pruebas externas se cobran por separado cuando corresponda.</p></details>
+      <details><summary>¿Atienden emergencias?</summary><p>No. Si presentas una emergencia o síntomas graves, acude a un servicio de emergencias.</p></details>
+      <details><summary>¿Puedo solicitar un certificado?</summary><p>Sí, cuando la valoración clínica lo justifique. No se emiten certificados sin valoración previa.</p></details>
+      <details><summary>¿Cómo se usan mis datos personales y de salud?</summary><p>Los datos proporcionados para agendar se usan para gestionar la cita. La información clínica se trata de forma reservada y por canales adecuados para la atención. Puedes solicitar información sobre el tratamiento de tus datos y ejercer los derechos que correspondan conforme a la normativa ecuatoriana de protección de datos personales.</p></details>
+      <details><summary>¿Puedo enviar resultados médicos por un formulario público?</summary><p>No. Evita compartir diagnósticos, historias clínicas o resultados por formularios de contacto o enlaces públicos. El equipo te indicará un canal privado cuando sea necesario.</p></details>
+      <details><summary>¿La teleconsulta sirve para cualquier problema?</summary><p>No. Primero se verifica si el motivo puede atenderse a distancia. Si se necesita una exploración física u otra atención presencial, se te orientará sobre el siguiente paso.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="contenedor pie">
+    <div><strong>EQUITHOS MÉDICA: Salud Integral</strong><br>La Carolina, Quito · Atención previa cita</div>
+    <div><a href="#inicio">Volver arriba</a> · <a href="https://maps.app.goo.gl/wim3sNRPQeSF1tjr8" target="_blank" rel="noopener noreferrer">Cómo llegar</a></div>
+  </div>
+</footer>
+<a class="boton flotante" href="#contacto">Agendar por WhatsApp</a>
+</body>
+</html>
