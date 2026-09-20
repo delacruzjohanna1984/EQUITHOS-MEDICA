@@ -1,328 +1,894 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Medicina general, prevención y seguimiento de salud cerca de La Carolina, Quito. Conoce los servicios de Equithos Médica.">
-  <title>Equithos Médica: Salud Integral | Medicina general en La Carolina, Quito</title>
-  <style>
-    :root{--verde:#25564d;--verde2:#376c60;--salvia:#6c9d8a;--claro:#eef5f1;--tinta:#20332e;--gris:#52615b;--borde:#d9e6df;--blanco:#fff;--azul-jdc:#617a8c;--oro-jdc:#c8ae79}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:#fbfcfa;color:var(--tinta);font:16px/1.65 Arial,Helvetica,sans-serif}
-    a{color:var(--verde)}
-    img{max-width:100%;height:auto}
-    .contenedor{width:min(1120px,calc(100% - 36px));margin:auto}
-    .salto{position:absolute;left:-9999px}.salto:focus{left:12px;top:12px;z-index:100;background:#fff;padding:10px}
-    header{background:#fff;border-bottom:1px solid var(--borde);position:sticky;top:0;z-index:20}
-    .barra{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
-    .marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--verde);font-weight:800;line-height:1.1}
-    .marca svg{width:42px;height:42px;flex:none}
-    .marca small{display:block;color:var(--salvia);font-size:11px;letter-spacing:.18em}
-    nav{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}
-    nav a{text-decoration:none;font-weight:700}
-    nav a:hover,nav a:focus{text-decoration:underline}
-    .boton{display:inline-block;background:var(--verde);color:#fff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:10px;border:2px solid var(--verde);text-align:center}
-    .boton:hover,.boton:focus{background:#173e36}
-    .boton.secundario{background:transparent;color:var(--verde)}
-    .boton.secundario:hover{background:var(--claro)}
-    .hero{background:linear-gradient(130deg,#e5f0e9 0%,#f8fbf8 65%);padding:70px 0}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-    .etiqueta{color:var(--verde2);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:12px}
-    h1,h2,h3{line-height:1.2;margin:0 0 16px}
-    h1{font-size:clamp(36px,5vw,62px);letter-spacing:-.04em}
-    h2{font-size:clamp(27px,3vw,38px);letter-spacing:-.025em}
-    h3{font-size:21px}
-    p{margin:0 0 16px}
-    .hero p{font-size:19px;max-width:610px}
-    .acciones{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}
-    .datos{display:flex;gap:12px;flex-wrap:wrap}
-    .dato{background:#fff;border:1px solid var(--borde);border-radius:12px;padding:12px 16px;font-weight:700}
-    .foto{border-radius:26px;overflow:hidden;box-shadow:0 20px 50px #25564d22;background:var(--salvia);min-height:360px}
-    .foto img{display:block;width:100%;height:100%;min-height:360px;object-fit:cover}
-    section{padding:72px 0;scroll-margin-top:90px}
-    .intro{max-width:720px;color:var(--gris)}
-    .rejilla{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-    .tarjeta{background:#fff;border:1px solid var(--borde);border-radius:18px;padding:25px;box-shadow:0 7px 24px #25564d0a}
-    .tarjeta p:last-child{margin-bottom:0}
-    .precio{font-size:30px;font-weight:800;color:var(--verde);line-height:1.2}
-    .precio small{font-size:14px;font-weight:400;color:var(--gris)}
-    .suave{background:var(--claro)}
-    .dos{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
-    ul{padding-left:21px;margin:12px 0 20px}
-    li{margin-bottom:7px}
-    .aviso{border-left:4px solid var(--salvia);padding:12px 16px;background:#fff;border-radius:0 9px 9px 0;color:var(--gris)}
-    .jdc{background:#f5f7f8;border:1px solid #dce3e7;border-radius:22px;padding:30px}
-    .jdc .logo{display:block;width:min(370px,100%);margin:0 auto 24px}
-    .jdc h3,.jdc a{color:var(--azul-jdc)}
-    .jdc .boton{background:var(--azul-jdc);border-color:var(--azul-jdc);color:#fff}
-    .jdc .boton:hover{background:#455f71}
-    .jdc .acento{color:var(--oro-jdc)}
-    .tabla{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden}
-    .tabla th,.tabla td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--borde);vertical-align:top}
-    .tabla th{background:var(--verde);color:#fff}
-    details{background:#fff;border:1px solid var(--borde);border-radius:11px;padding:13px 17px;margin:10px 0}
-    summary{cursor:pointer;font-weight:700;color:var(--verde)}
-    details p{margin:12px 0 0}
-    .videos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}
-    .videos a{display:block;padding:16px 19px;background:#fff;border:1px solid var(--borde);border-radius:11px;text-decoration:none;font-weight:700}
-    .videos a:hover{text-decoration:underline}
-    .mapa{border-radius:18px;overflow:hidden;border:1px solid var(--borde);min-height:310px;background:#e9eee9}
-    iframe{display:block;border:0;width:100%;height:310px}
-    footer{background:#183f37;color:#e7f0ea;padding:42px 0}
-    footer a{color:#e7f0ea}
-    .pie{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
-    .flotante{position:fixed;right:18px;bottom:18px;z-index:30;box-shadow:0 8px 30px #183f3744}
-    @media(max-width:850px){nav{display:none}.hero-grid,.dos{grid-template-columns:1fr}.rejilla{grid-template-columns:repeat(2,1fr)}.foto{max-height:420px}}
-    @media(max-width:600px){section{padding:54px 0}.hero{padding:45px 0}.rejilla,.videos{grid-template-columns:1fr}.barra{min-height:68px}.hero p{font-size:17px}.flotante{left:18px;right:18px}.pie{padding-bottom:55px}.tabla{font-size:14px}.tabla th,.tabla td{padding:10px}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EQUITHOS MÉDICA: Salud Integral</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* ==========================================================================
+           VARIABLES DE COLOR Y ESTILOS GLOBALES
+           ========================================================================== */
+        :root {
+            /* Colores de Marca EQUITHOS MÉDICA */
+            --eq-primary: #3d7869;      /* Verde esmeralda/salud principal */
+            --eq-dark: #1b352f;         /* Verde oscuro texto / encabezados */
+            --eq-light: #f2f7f5;        /* Fondo claro complementario */
+            --eq-accent: #529483;       /* Verde claro interacción */
+            
+            /* Colores Perfil Dra. Johanna De la Cruz (JDC) */
+            --jdc-slate: #6b899a;       /* Gris azulado elegante */
+            --jdc-gold: #c6a768;        /* Dorado/hoja accent */
+            --jdc-bg: #f9f9f6;          /* Fondo cálido perla */
+
+            --text-main: #333333;
+            --text-muted: #666666;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fafafa;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ==========================================================================
+           HEADER Y NAVEGACIÓN
+           ========================================================================== */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* SVG del Logo Equithos */
+        .logo-svg {
+            width: 48px;
+            height: 48px;
+        }
+
+        .brand-titles h1 {
+            font-size: 1.4rem;
+            color: var(--eq-dark);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-titles span {
+            font-size: 0.85rem;
+            color: var(--eq-primary);
+            letter-spacing: 2px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--eq-primary);
+        }
+
+        .btn-whp-nav {
+            background-color: var(--eq-primary);
+            color: var(--white) !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .btn-whp-nav:hover {
+            background-color: var(--eq-dark);
+        }
+
+        /* ==========================================================================
+           SECCIONES COMUNES
+           ========================================================================== */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--eq-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* ==========================================================================
+           INICIO / HERO
+           ========================================================================== */
+        #inicio {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding-top: 3rem;
+        }
+
+        .hero-content h2 {
+            font-size: 2.5rem;
+            color: var(--eq-dark);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: var(--eq-light);
+            color: var(--eq-primary);
+            padding: 0.4rem 1rem;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.8rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background-color: var(--eq-primary);
+            color: var(--white);
+            padding: 0.8rem 1.8rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--eq-dark);
+        }
+
+        .hero-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border-top: 5px solid var(--eq-primary);
+        }
+
+        /* ==========================================================================
+           GRID DE SERVICIOS Y TARIFAS
+           ========================================================================== */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.8rem;
+            box-shadow: var(--shadow);
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            color: var(--eq-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .card .price {
+            font-size: 1.8rem;
+            color: var(--eq-primary);
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        .card ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .card ul li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .card ul li i {
+            color: var(--eq-primary);
+        }
+
+        /* ==========================================================================
+           SECCIÓN EXCLUSIVA JOHANNA DE LA CRUZ (COLORES PROPIOS)
+           ========================================================================== */
+        .jdc-section-wrapper {
+            background-color: var(--jdc-bg);
+            border-top: 2px solid var(--jdc-gold);
+            border-bottom: 2px solid var(--jdc-gold);
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .jdc-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2.5rem;
+            align-items: center;
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(107, 137, 154, 0.15);
+        }
+
+        .jdc-logo-box {
+            text-align: center;
+            padding: 1rem;
+            border-right: 1px solid #eee;
+        }
+
+        /* SVG Reconstrucción exacta del Logo Johana De La Cruz (JDC) */
+        .jdc-svg-logo {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+        }
+
+        .jdc-content h3 {
+            color: var(--jdc-slate);
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .jdc-subtitle {
+            color: var(--jdc-gold);
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .jdc-content p {
+            color: #555;
+            font-size: 0.98rem;
+            margin-bottom: 1rem;
+        }
+
+        .jdc-credentials {
+            background: var(--jdc-bg);
+            padding: 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: #444;
+            border-left: 3px solid var(--jdc-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-jdc {
+            background-color: var(--jdc-slate);
+            color: var(--white);
+            padding: 0.7rem 1.4rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-jdc:hover {
+            background-color: #526d7d;
+        }
+
+        /* ==========================================================================
+           TABLAS DE PRECIOS Y PROCEDIMIENTOS
+           ========================================================================== */
+        .table-responsive {
+            overflow-x: auto;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--eq-primary);
+            color: var(--white);
+            padding: 1rem;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:hover {
+            background-color: var(--eq-light);
+        }
+
+        /* ==========================================================================
+           SECCIÓN YOUTUBE (GUÍA DE SALUD)
+           ========================================================================== */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .video-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-info {
+            padding: 1rem;
+        }
+
+        .video-info h4 {
+            color: var(--eq-dark);
+            font-size: 1rem;
+        }
+
+        /* ==========================================================================
+           UBICACIÓN Y FOOTER
+           ========================================================================== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .contact-info {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item i {
+            font-size: 1.3rem;
+            color: var(--eq-primary);
+            margin-top: 3px;
+        }
+
+        footer {
+            background-color: var(--eq-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        /* Botón Flotante WhatsApp */
+        .btn-float-whp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            #inicio {
+                grid-template-columns: 1fr;
+            }
+            .jdc-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .jdc-logo-box {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 1.5rem;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
-<a class="salto" href="#contenido">Saltar al contenido</a>
 
-<header>
-  <div class="contenedor barra">
-    <a class="marca" href="#inicio" aria-label="Equithos Médica, ir al inicio">
-      <svg viewBox="0 0 100 100" role="img" aria-label="Logo Equithos Médica">
-        <circle cx="50" cy="50" r="48" fill="#376c60"/>
-        <path d="M14 51h20l11-22 13 45 13-23h15" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span>EQUITHOS MÉDICA<small>SALUD INTEGRAL</small></span>
+    <!-- ==========================================================================
+       ENCABEZADO
+       ========================================================================== -->
+    <header>
+        <div class="header-container">
+            <div class="logo-brand">
+                <!-- SVG Isotipo Equithos Médica -->
+                <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="#3d7869"/>
+                    <path d="M22 50H38L44 32L54 68L62 44L68 50H78" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="brand-titles">
+                    <h1>EQUITHOS MÉDICA</h1>
+                    <span>Salud Integral</span>
+                </div>
+            </div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#medicina-general">Medicina General</a>
+                <a href="#control-cronicOS">Crónicos</a>
+                <a href="#procedimientos">Procedimientos</a>
+                <a href="#psicologia">Psicología</a>
+                <a href="#equipo">Equipo</a>
+                <a href="#empresas">Empresas</a>
+                <a href="#teleconsulta">Teleconsulta</a>
+                <a href="#contacto">Ubicación</a>
+                <a href="https://wa.me/593999999999?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-whp-nav" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Agendar
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       1. INICIO
+       ========================================================================== -->
+    <section id="inicio">
+        <div class="hero-content">
+            <span class="hero-badge">Sector La Carolina • Quito</span>
+            <h2>Medicina cercana para cuidar tu salud con continuidad</h2>
+            <p>Atención médica presencial de 25 a 30 minutos orientada a la prevención, seguimiento cardiometabólico y trato humano.</p>
+            <div class="hero-cta">
+                <a href="https://wa.me/593999999999?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Agendar Consulta USD $20
+                </a>
+            </div>
+        </div>
+        <div class="hero-card">
+            <h3>Atención Médica Integral</h3>
+            <p style="margin-top: 0.5rem; color: var(--text-muted);">Ubicados en zona estratégica cerca de oficinas, comercios y estación del Metro La Carolina.</p>
+            <hr style="margin: 1rem 0; border: none; border-top: 1px solid #eee;">
+            <ul style="list-style: none;">
+                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--eq-primary);"></i> Consulta presencial regular: <strong>$20 USD</strong></li>
+                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--eq-primary);"></i> Tiempos claros sin esperas prolongadas</li>
+                <li><i class="fas fa-check-circle" style="color: var(--eq-primary);"></i> Planes y seguimiento escrito continuo</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       2. MEDICINA GENERAL
+       ========================================================================== -->
+    <section id="medicina-general">
+        <div class="section-title">
+            <h2>Medicina General</h2>
+            <p>Atención primaria completa, prevención y evaluación clínica integral</p>
+        </div>
+        <div class="cards-grid">
+            <div class="card">
+                <div>
+                    <h3>Consulta Presencial</h3>
+                    <div class="price">$20 <span style="font-size: 1rem; font-weight: normal; color: var(--text-muted);">USD</span></div>
+                    <p>Atención completa de 25 a 30 minutos.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Valoración clínica integral</li>
+                        <li><i class="fas fa-check"></i> Diagnóstico y tratamiento inicial</li>
+                        <li><i class="fas fa-check"></i> Síntomas agudos no urgentes</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/593999999999?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-primary" style="text-align: center; justify-content: center;" target="_blank">Agendar Cita</a>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Primera Evaluación Preventiva</h3>
+                    <div class="price">$20 <span style="font-size: 1rem; font-weight: normal; color: var(--text-muted);">USD</span></div>
+                    <p>Ideal para chequeo general inicial o pacientes crónicos por primera vez.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Historia clínica orientada</li>
+                        <li><i class="fas fa-check"></i> Plan escrito de seguimiento</li>
+                        <li><i class="fas fa-check"></i> Revisión de factores de riesgo</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/593999999999?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-primary" style="text-align: center; justify-content: center;" target="_blank">Agendar Cita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       3. CONTROL DE PRESIÓN Y DIABETES
+       ========================================================================== -->
+    <section id="control-cronicos" style="background-color: var(--eq-light); border-radius: 12px;">
+        <div class="section-title">
+            <h2>Control de Presión y Diabetes</h2>
+            <p>Seguimiento continuo de condiciones cardiometabólicas</p>
+        </div>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Primera Evaluación de Crónicos</h3>
+                <div class="price">$20 USD</div>
+                <p>Establecimiento del plan de salud y revisión completa de exámenes de laboratorio.</p>
+            </div>
+            <div class="card">
+                <h3>Control de Crónicos (Subsecuente)</h3>
+                <div class="price">$15 USD</div>
+                <p>Revisión periódica de resultados, ajustes de dosis y verificación de adherencia al tratamiento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       4. PROCEDIMIENTOS Y TARIFAS
+       ========================================================================== -->
+    <section id="procedimientos">
+        <div class="section-title">
+            <h2>Procedimientos Clínicos</h2>
+            <p>Tarifas transparentes (Servicios prestados previa valoración clínica y disponibilidad de insumos)</p>
+        </div>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Tarifa (USD)</th>
+                        <th>Detalles / Incluye</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Control de crónicos subsecuente</td>
+                        <td>$15</td>
+                        <td>Revisión de resultados y adherencia</td>
+                    </tr>
+                    <tr>
+                        <td>Certificado médico con valoración</td>
+                        <td>$10</td>
+                        <td>Incluido si nace de una consulta pertinente</td>
+                    </tr>
+                    <tr>
+                        <td>Curación simple / Retiro de puntos</td>
+                        <td>$15</td>
+                        <td>Insumos básicos incluidos</td>
+                    </tr>
+                    <tr>
+                        <td>Nebulización</td>
+                        <td>$10</td>
+                        <td>Más insumos (depende del fármaco)</td>
+                    </tr>
+                    <tr>
+                        <td>Inyección IM / IV / Fluidoterapia básica</td>
+                        <td>$3 / $5 / $25 - $35</td>
+                        <td>Fármacos se cobran por separado</td>
+                    </tr>
+                    <tr>
+                        <td>Glucosa capilar</td>
+                        <td>$3</td>
+                        <td>Toma y lectura rápida</td>
+                    </tr>
+                    <tr>
+                        <td>Sutura / Cirugía menor ambulatoria</td>
+                        <td>$30 - $50</td>
+                        <td>Sujeto a valoración previa de complejidad</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       5. PSICOLOGÍA Y HÁBITOS
+       ========================================================================== -->
+    <section id="psicologia">
+        <div class="section-title">
+            <h2>Psicología y Hábitos Saludables</h2>
+            <p>Enfoque biopsicosocial para el bienestar emocional y la relación con la alimentación</p>
+        </div>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Sesión de Psicología (50 min)</h3>
+                <div class="price">$30 - $35 USD</div>
+                <p>Atención enfocada en salud emocional, manejo del estrés, adultos mayores y educación en hábitos sostenibles.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Relación con la alimentación</li>
+                    <li><i class="fas fa-check"></i> Estimulación del lenguaje</li>
+                    <li><i class="fas fa-check"></i> Acompañamiento integral</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       6. EQUIPO MÉDICO Y SECCIÓN EXCLUSIVA DRA. JOHANNA DE LA CRUZ
+       ========================================================================== -->
+    <section id="equipo">
+        <div class="section-title">
+            <h2>Nuestro Equipo Profesional</h2>
+            <p>Profesionales de la salud comprometidos con tu bienestar</p>
+        </div>
+
+        <!-- BLOQUE EXCLUSIVO DRA. JOHANNA DE LA CRUZ (USO DE SUS PROPIOS COLORES Y LOGO) -->
+        <div class="jdc-section-wrapper">
+            <div class="jdc-container">
+                <div class="jdc-logo-box">
+                    <!-- SVG Reconstruido del Logo Oficial "JDC Dra. Johanna De la Cruz" -->
+                    <svg class="jdc-svg-logo" viewBox="0 0 350 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M90 80C90 50 130 50 130 80C130 120 70 110 70 130C70 150 110 150 130 130" stroke="#6b899a" stroke-width="6" fill="none" stroke-linecap="round"/>
+                        <path d="M140 60C180 60 210 80 210 110C210 140 180 160 140 160" stroke="#6b899a" stroke-width="6" fill="none" stroke-linecap="round"/>
+                        <!-- Hoja dorada central -->
+                        <path d="M140 90C160 70 180 90 180 110C160 130 140 110 140 90Z" fill="#c6a768"/>
+                        <path d="M140 90C160 100 180 110 180 110" stroke="#f9f9f6" stroke-width="2"/>
+                        <path d="M130 160C160 160 190 175 220 160" stroke="#c6a768" stroke-width="4" fill="none"/>
+                        <!-- Texto del Logo JDC -->
+                        <text x="175" y="185" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#6b899a" text-anchor="middle" letter-spacing="1">DRA. JOHANNA DE LA CRUZ</text>
+                    </svg>
+                </div>
+                <div class="jdc-content">
+                    <h3>Dra. Johanna De la Cruz, Mgs.</h3>
+                    <div class="jdc-subtitle">Medicina General & Gestión de Servicios de Salud</div>
+                    <p>Médica y Magíster en Salud Pública con más de 12 años de experiencia en atención clínica, salud ocupacional y gestión sanitaria. Su consulta combina escucha activa, prevención y seguimiento riguroso de cada plan de salud.</p>
+                    <div class="jdc-credentials">
+                        <strong>Acreditaciones y Registros:</strong><br>
+                        • Reg. Profesional N°: L37F48N142<br>
+                        • Reg. SENESCYT Salud Pública: 4842247200<br>
+                        • Certificación Prevención Riesgos Laborales: MDT-7219-CCL-611445
+                    </div>
+                    <p><strong>Horarios de atención (Previa Cita):</strong><br>
+                    Lunes a Viernes: 09:00 a 18:00 | Sábados: 09:00 a 12:00</p>
+                    <br>
+                    <a href="https://wa.me/593999999999?text=Quiero%20reservar%20consulta%20con%20Dra.%20Johanna%20De%20la%20Cruz" class="btn-jdc" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Agendar con Dra. Johanna
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEGUNDO PERFIL (MANTIENE ESTILO GENERAL EQUITHOS) -->
+        <div class="card" style="max-width: 1000px; margin: 0 auto;">
+            <h3>Psic. Alexandra</h3>
+            <p style="color: var(--eq-primary); font-weight: 600;">Bienestar Emocional & Salud Integral</p>
+            <p style="margin-top: 0.5rem;">Licenciada en Psicología y Enfermería, Magíster en Nutrición y Dietética. Trabaja en el acompañamiento biopsicosocial, hábitos saludables y promoción del autocuidado.</p>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       7. SALUD OCUPACIONAL Y EMPRESAS
+       ========================================================================== -->
+    <section id="empresas" style="background-color: var(--eq-light); border-radius: 12px;">
+        <div class="section-title">
+            <h2>Servicios para Empresas</h2>
+            <p>Salud Ocupacional y Programas Preventivos Corporativos</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 8px;">
+            <p>Ofrecemos soluciones integrales para pequeñas y medianas empresas ubicadas en el sector La Carolina y Quito:</p>
+            <ul style="margin: 1rem 0 1.5rem 1.5rem;">
+                <li>Evaluación preventiva de trabajadores y fichas ocupacionales.</li>
+                <li>Programas preventivos y talleres de salud laboral.</li>
+                <li>Asesoría en gestión y auditoría sanitaria.</li>
+            </ul>
+            <a href="https://wa.me/593999999999?text=Deseo%20cotizar%20servicios%20ocupacionales%20para%20mi%20empresa" class="btn-primary" target="_blank">Solicitar Cotización Empresarial</a>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       8. TELECONSULTA
+       ========================================================================== -->
+    <section id="teleconsulta">
+        <div class="section-title">
+            <h2>Teleconsulta de Seguimiento</h2>
+            <p>Atención remota para casos clínicamente adecuados</p>
+        </div>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Teleconsulta (20 - 25 min)</h3>
+                <div class="price">$15 USD</div>
+                <p>Apta para revisión de exámenes, seguimiento de tratamientos ya iniciados y orientación médica general.</p>
+                <ul>
+                    <li><i class="fas fa-lock"></i> Plataforma privada y segura</li>
+                    <li><i class="fas fa-file-invoice"></i> Envío de recetas/indicaciones digitales</li>
+                </ul>
+                <a href="https://wa.me/593999999999?text=Quiero%20agendar%20una%20teleconsulta" class="btn-primary" style="text-align: center; justify-content: center;" target="_blank">Agendar Teleconsulta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       9. GUÍA DE SALUD (VIDEOS YOUTUBE)
+       ========================================================================== -->
+    <section id="guia">
+        <div class="section-title">
+            <h2>Guía de Salud</h2>
+            <p>Cápsulas informativas preparadas por la Dra. Johanna De la Cruz</p>
+        </div>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/4uxuQhcCNlA" title="Gripe, influenza o COVID" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h4>Gripe, Influenza o COVID: ¿Cómo diferenciarlos?</h4>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/WJ0QFwx5quU" title="Metabolismo femenino" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h4>¿Por qué cambia el metabolismo femenino?</h4>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/XN8HwT0cRuU" title="Artritis vs Artrosis" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h4>Artritis vs. Artrosis: ¿Cómo identificarlos?</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       10. UBICACIÓN Y CONTACTO
+       ========================================================================== -->
+    <section id="contacto">
+        <div class="section-title">
+            <h2>Ubicación y Contacto</h2>
+            <p>Fácil acceso en el sector La Carolina, Quito</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Dirección:</strong>
+                        <p>Calle Grecia, cerca al Mall El Jardín y Estación Metro La Carolina, Quito, Ecuador.</p>
+                        <a href="https://maps.app.goo.gl/wim3sNRPQeSF1tjr8" target="_blank" style="color: var(--eq-primary); text-decoration: underline;">Ver mapa en Google Maps</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Horario de Atención:</strong>
+                        <p>Lunes a Viernes: 08:00 - 18:00<br>Sábados: 09:00 - 12:00 (Previa Cita)</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <strong>Citas y Agendamiento:</strong>
+                        <p>Mensaje directo a WhatsApp para disponibilidad inmediata.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%; height: 100%; min-height: 300px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7903820297805!2d-78.49106292419262!3d-0.18862799980948943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMTEnMTkuMSJTIDc4wrAyOScyMC41Ilc!5e0!3m2!1ses!2sec!4v1620000000000!5m2!1ses!2sec" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       BOTÓN FLOTANTE WHATSAPP
+       ========================================================================== -->
+    <a href="https://wa.me/593999999999?text=Quiero%20reservar%20consulta%20de%20medicina%20general" class="btn-float-whp" target="_blank" title="Agendar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
-    <nav aria-label="Navegación principal">
-      <a href="#medicina">Medicina</a><a href="#cronicos">Controles</a><a href="#procedimientos">Procedimientos</a>
-      <a href="#psicologia">Psicología</a><a href="#equipo">Equipo</a><a href="#contacto">Contacto</a>
-    </nav>
-  </div>
-</header>
 
-<main id="contenido">
-  <section class="hero" id="inicio">
-    <div class="contenedor hero-grid">
-      <div>
-        <div class="etiqueta">La Carolina · Quito</div>
-        <h1>EQUITHOS MÉDICA: Salud Integral</h1>
-        <p><strong>Medicina cercana para cuidar tu salud con continuidad en La Carolina.</strong></p>
-        <p>Consulta general, prevención y seguimiento con la Dra. Johanna de la Cruz. Atención particular con tiempo para escuchar y un plan claro para continuar tu cuidado.</p>
-        <div class="acciones">
-          <a class="boton" href="#contacto">Agendar por WhatsApp</a>
-          <a class="boton secundario" href="#medicina">Conocer los servicios</a>
-        </div>
-        <div class="datos">
-          <span class="dato">Consulta general: USD 20</span>
-          <span class="dato">25 a 30 minutos</span>
-          <span class="dato">Atención previa cita</span>
-        </div>
-      </div>
-      <div class="foto">
-        <img src="Foto JDC.jpg" alt="Dra. Johanna de la Cruz" loading="eager">
-      </div>
-    </div>
-  </section>
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer>
+        <p>&copy; 2026 EQUITHOS MÉDICA - Salud Integral. Todos los derechos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8;">Atención médica en Quito, Ecuador • Cumplimiento con la normativa de protección de datos de salud.</p>
+    </footer>
 
-  <section aria-labelledby="prioridades">
-    <div class="contenedor">
-      <div class="etiqueta">Cómo podemos ayudarte</div>
-      <h2 id="prioridades">Tres servicios para empezar a cuidarte</h2>
-      <div class="rejilla">
-        <article class="tarjeta"><h3>Medicina general</h3><p>Valoración de molestias frecuentes, orientación, prevención y seguimiento.</p><p class="precio">USD 20</p><a href="#medicina">Ver consulta →</a></article>
-        <article class="tarjeta"><h3>Presión y diabetes</h3><p>Revisión de resultados, tratamiento y hábitos con un plan de control acordado contigo.</p><p class="precio">Desde USD 15</p><a href="#cronicos">Ver controles →</a></article>
-        <article class="tarjeta"><h3>Psicología y hábitos</h3><p>Un espacio para trabajar bienestar emocional, relación con la alimentación y autocuidado.</p><p class="precio"><small>Tarifa por confirmar</small></p><a href="#psicologia">Conocer el servicio →</a></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="suave" id="medicina">
-    <div class="contenedor dos">
-      <div>
-        <div class="etiqueta">Medicina general en La Carolina</div>
-        <h2>Una consulta con tiempo para escucharte</h2>
-        <p>La atención presencial dura aproximadamente 25 a 30 minutos e incluye entrevista, valoración clínica, orientación y un plan de seguimiento cuando corresponda.</p>
-        <ul>
-          <li>Molestias habituales que pueden atenderse mediante una cita programada.</li>
-          <li>Chequeos preventivos y revisión de factores de riesgo.</li>
-          <li>Control de presión arterial, diabetes y otras necesidades de seguimiento.</li>
-          <li>Valoración para certificados cuando sea pertinente.</li>
-        </ul>
-        <p class="aviso">La consulta no reemplaza la atención de emergencias. Los certificados se emiten únicamente después de una valoración.</p>
-      </div>
-      <div class="tarjeta">
-        <div class="etiqueta">Consulta presencial</div>
-        <p class="precio">USD 20</p>
-        <p>Duración estimada: 25 a 30 minutos. Insumos, medicamentos y pruebas externas se cobran por separado cuando proceda.</p>
-        <a class="boton" href="#contacto">Reservar consulta</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="cronicos">
-    <div class="contenedor">
-      <div class="etiqueta">Prevención y continuidad</div>
-      <h2>Control de presión y diabetes</h2>
-      <p class="intro">Para quienes necesitan una primera revisión o controles periódicos. Revisamos resultados, medicación, adherencia y hábitos; la frecuencia de las próximas citas se acuerda según la valoración clínica.</p>
-      <div class="rejilla">
-        <article class="tarjeta"><h3>Primera evaluación</h3><p>Valoración inicial y plan escrito de seguimiento.</p><p class="precio">USD 20</p></article>
-        <article class="tarjeta"><h3>Control posterior</h3><p>Revisión de resultados y evolución del plan.</p><p class="precio">USD 15</p></article>
-        <article class="tarjeta"><h3>Seguimiento cercano</h3><p>Orientación para sostener los controles y resolver dudas en citas programadas.</p><a href="#contacto">Solicitar una cita →</a></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="suave" id="procedimientos">
-    <div class="contenedor">
-      <div class="etiqueta">Atención ambulatoria</div>
-      <h2>Procedimientos</h2>
-      <p class="intro">La disponibilidad depende de la valoración, los insumos y la cartera de servicios habilitada. Confirma el procedimiento al reservar.</p>
-      <div style="overflow-x:auto">
-        <table class="tabla">
-          <thead><tr><th>Servicio</th><th>Tarifa referencial</th><th>Observación</th></tr></thead>
-          <tbody>
-            <tr><td>Curación simple o retiro de puntos</td><td>USD 15</td><td>Insumos incluidos</td></tr>
-            <tr><td>Nebulización</td><td>USD 10</td><td>Fármaco e insumos según el caso</td></tr>
-            <tr><td>Inyección intramuscular / intravenosa</td><td>USD 3 / USD 5</td><td>Fármacos aparte</td></tr>
-            <tr><td>Glucosa capilar</td><td>USD 3</td><td>Sujeta a disponibilidad</td></tr>
-            <tr><td>Otros procedimientos menores</td><td>Consultar</td><td>Solo tras confirmar complejidad y posibilidad de atención ambulatoria</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="margin-top:18px" class="aviso">Todos los procedimientos están sujetos a valoración y cartera habilitada.</p>
-    </div>
-  </section>
-
-  <section id="psicologia">
-    <div class="contenedor dos">
-      <div>
-        <div class="etiqueta">Bienestar emocional</div>
-        <h2>Psicología y hábitos saludables</h2>
-        <p>Alexandra trabaja desde un enfoque biopsicosocial para acompañar el bienestar emocional, la relación con la alimentación, los hábitos y el autocuidado.</p>
-        <p>La orientación sobre alimentación y hábitos se presenta dentro del alcance de su formación y de la prestación profesional habilitada; no sustituye una valoración médica o nutricional cuando se requiera.</p>
-        <a class="boton" href="#contacto">Consultar disponibilidad</a>
-      </div>
-      <div class="tarjeta">
-        <h3>Sesión de psicología</h3>
-        <p>Duración aproximada: 50 minutos.</p>
-        <p><strong>Tarifa orientativa: USD 30–35, sujeta a confirmación.</strong></p>
-        <p>Consulta la disponibilidad y las condiciones antes de reservar.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="suave" id="equipo">
-    <div class="contenedor">
-      <div class="etiqueta">Nuestro equipo</div>
-      <h2>Profesionales que te acompañan</h2>
-      <div class="dos">
-        <article class="jdc">
-          <img class="logo" src="Logo Johanna De la Cruz Cevallos.jpeg" alt="Logo de la Dra. Johanna de la Cruz">
-          <h3>Dra. Johanna de la Cruz</h3>
-          <p>Médica y magíster en Salud Pública con más de 12 años de experiencia en atención clínica, salud ocupacional y gestión de servicios. Su consulta combina escucha, prevención y seguimiento de cada plan de salud.</p>
-          <p><small>Registro profesional: L37F48N142 · Registro SENESCYT Salud Pública: 4842247200.</small></p>
-          <p><strong>Atención previa cita:</strong> lunes a viernes de 09:00 a 18:00; sábados de 09:00 a 12:00.</p>
-          <a class="boton" href="#contacto">Reservar con Johanna</a>
-        </article>
-        <article class="tarjeta">
-          <h3>Alexandra</h3>
-          <p>Licenciada en Psicología y Enfermería, magíster en Nutrición y Dietética. Trabaja en bienestar emocional, relación con la alimentación, hábitos y autocuidado.</p>
-          <p>Solicita información sobre su agenda y las prestaciones disponibles.</p>
-          <a class="boton" href="#contacto">Consultar con Alexandra</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="empresas">
-    <div class="contenedor dos">
-      <div>
-        <div class="etiqueta">Salud ocupacional</div>
-        <h2>Prevención para empresas</h2>
-        <p>La experiencia de la Dra. Johanna de la Cruz incluye salud ocupacional, auditoría y gestión de servicios de salud. Podemos conversar sobre chequeos preventivos, fichas ocupacionales y programas adaptados a las necesidades de tu equipo.</p>
-        <p>El alcance y la cotización se definen según el caso, las competencias profesionales y los requisitos de habilitación aplicables.</p>
-        <a class="boton" href="#contacto">Solicitar cotización</a>
-      </div>
-      <div class="tarjeta">
-        <h3>Para preparar una propuesta</h3>
-        <p>Al contactarnos, indica el nombre de la empresa, el número aproximado de personas y el servicio que necesitas. No envíes historias clínicas ni resultados médicos por este medio.</p>
-        <p><small>Certificación en Prevención de Riesgos Laborales: MDT-7219-CCL-611445.</small></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="suave" id="teleconsulta">
-    <div class="contenedor dos">
-      <div>
-        <div class="etiqueta">Seguimiento a distancia</div>
-        <h2>Teleconsulta</h2>
-        <p>Para casos que puedan resolverse de forma remota, especialmente controles de seguimiento. Antes de confirmar, el equipo verificará si la atención a distancia es adecuada o si necesitas una valoración presencial.</p>
-        <ol>
-          <li>Solicita disponibilidad y explica brevemente el motivo general de la cita.</li>
-          <li>Recibe confirmación de horario, medio de atención y forma de pago.</li>
-          <li>Conéctate desde un lugar privado y con buena conexión.</li>
-        </ol>
-        <p class="aviso">La teleconsulta tiene límites clínicos y no se usa para emergencias. Comparte información de salud únicamente por el canal privado indicado al confirmar la cita.</p>
-      </div>
-      <div class="tarjeta">
-        <h3>Teleconsulta de seguimiento</h3>
-        <p class="precio">USD 15</p>
-        <p>Duración aproximada: 20 a 25 minutos.</p>
-        <a class="boton" href="#contacto">Consultar si aplica a mi caso</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="guia">
-    <div class="contenedor">
-      <div class="etiqueta">Guía de salud</div>
-      <h2>Respuestas en video con la Dra. Johanna</h2>
-      <p class="intro">Contenido educativo para comprender temas frecuentes de salud. Los videos no sustituyen una consulta individual.</p>
-      <div class="videos">
-        <a href="https://www.youtube.com/watch?v=4uxuQhcCNlA" target="_blank" rel="noopener noreferrer">Gripe, influenza o COVID ↗</a>
-        <a href="https://www.youtube.com/watch?v=WJ0QFwx5quU" target="_blank" rel="noopener noreferrer">Por qué cambia el metabolismo femenino ↗</a>
-        <a href="https://www.youtube.com/watch?v=XN8HwT0cRuU" target="_blank" rel="noopener noreferrer">Artritis y artrosis ↗</a>
-        <a href="https://www.youtube.com/watch?v=t6vZKi8tzmU" target="_blank" rel="noopener noreferrer">Probióticos y prebióticos ↗</a>
-        <a href="https://www.youtube.com/watch?v=txHlA_oC05Q" target="_blank" rel="noopener noreferrer">Vitaminas: ¿para qué sirven? ↗</a>
-        <a href="https://www.youtube.com/watch?v=bZhOqeiiR2U" target="_blank" rel="noopener noreferrer">¿Tu digestión no está bien? ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="suave" id="contacto">
-    <div class="contenedor">
-      <div class="etiqueta">Ubicación y contacto</div>
-      <h2>Visítanos cerca de La Carolina</h2>
-      <div class="dos">
-        <div>
-          <p>Estamos en la calle Grecia, al oeste del parque La Carolina, cerca de Mall El Jardín y de la estación La Carolina del Metro de Quito.</p>
-          <p><strong>Horario de la Dra. Johanna, previa cita:</strong><br>Lunes a viernes, 09:00 a 18:00<br>Sábados, 09:00 a 12:00</p>
-          <p><a class="boton" href="https://maps.app.goo.gl/wim3sNRPQeSF1tjr8" target="_blank" rel="noopener noreferrer">Abrir ubicación en Maps</a></p>
-          <p><strong>WhatsApp:</strong> el número de reservas está pendiente de incorporarse. Mientras tanto, utiliza el enlace de ubicación y consulta la disponibilidad por el canal de contacto del consultorio.</p>
-        </div>
-        <div class="mapa">
-          <iframe title="Mapa de ubicación de Equithos Médica en La Carolina, Quito" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=-78.4935%2C-0.1936%2C-78.4835%2C-0.1836&amp;layer=mapnik&amp;marker=-0.188628%2C-78.488488"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="preguntas">
-    <div class="contenedor">
-      <div class="etiqueta">Preguntas frecuentes</div>
-      <h2>Antes de tu cita</h2>
-      <details><summary>¿La consulta general cuesta USD 20?</summary><p>Sí. La consulta presencial de medicina general tiene una duración estimada de 25 a 30 minutos. Insumos, medicamentos o pruebas externas se cobran por separado cuando corresponda.</p></details>
-      <details><summary>¿Atienden emergencias?</summary><p>No. Si presentas una emergencia o síntomas graves, acude a un servicio de emergencias.</p></details>
-      <details><summary>¿Puedo solicitar un certificado?</summary><p>Sí, cuando la valoración clínica lo justifique. No se emiten certificados sin valoración previa.</p></details>
-      <details><summary>¿Cómo se usan mis datos personales y de salud?</summary><p>Los datos proporcionados para agendar se usan para gestionar la cita. La información clínica se trata de forma reservada y por canales adecuados para la atención. Puedes solicitar información sobre el tratamiento de tus datos y ejercer los derechos que correspondan conforme a la normativa ecuatoriana de protección de datos personales.</p></details>
-      <details><summary>¿Puedo enviar resultados médicos por un formulario público?</summary><p>No. Evita compartir diagnósticos, historias clínicas o resultados por formularios de contacto o enlaces públicos. El equipo te indicará un canal privado cuando sea necesario.</p></details>
-      <details><summary>¿La teleconsulta sirve para cualquier problema?</summary><p>No. Primero se verifica si el motivo puede atenderse a distancia. Si se necesita una exploración física u otra atención presencial, se te orientará sobre el siguiente paso.</p></details>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="contenedor pie">
-    <div><strong>EQUITHOS MÉDICA: Salud Integral</strong><br>La Carolina, Quito · Atención previa cita</div>
-    <div><a href="#inicio">Volver arriba</a> · <a href="https://maps.app.goo.gl/wim3sNRPQeSF1tjr8" target="_blank" rel="noopener noreferrer">Cómo llegar</a></div>
-  </div>
-</footer>
-<a class="boton flotante" href="#contacto">Agendar por WhatsApp</a>
 </body>
 </html>
